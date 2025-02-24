@@ -1,0 +1,9 @@
+<!ELEMENT busVoyage (user+)>
+<!ELEMENT user (name, email, mobile, registrationDate)>
+<!ATTLIST user
+    id ID #REQUIRED
+    username CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT mobile (#PCDATA)>
+<!ELEMENT registrationDate (#PCDATA)>

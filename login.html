@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Username must be at least 3 characters
+            if (username.length < 3) {
+                alert("Username must be at least 3 characters long.");
+                return false;
+            }
+
+            // Password must be at least 6 characters
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            // If validation passes, show success alert
+            alert("Login successful!");
+            return true; // Validation passed
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>Login</h2>
+            <form action="#" method="post" onsubmit="return validateLogin();">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Submit</button><br>
+                <a href="forgot_password.html">Forgot Password?</a><br>
+                <a href="registration.html">Sign Up</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
