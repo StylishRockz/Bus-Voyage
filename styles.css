@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    background-color: #6a1b9a; /* Deep purple */
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h2 {
+    color: #4e342e; /* Chocolate brown for headings */
+}
+
+p {
+    line-height: 1.6;
+    color: #2e7d32; /* Green for text */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #1e88e5; /* Blue link color */
+    padding: 10px;
+    display: block;
+    background-color: #f3e5f5; /* Lavender background for links */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #3949ab; /* Dark blue on hover */
+    color: white; /* Change text color on hover */
+}
+
+form {
+    background-color: #e8f5e9; /* Light green background for forms */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #80cbc4; /* Aqua border */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffa000; /* Amber button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f57c00; /* Dark amber on hover */
+}
+
+.logo {
+    height: 70px; /* Adjust the height as needed */
+    margin-top: 10px;
+}
+
+.sidebar {
+    float: left;
+    width: 15%;
+}
+
+.main-content {
+    float: right;
+    width: 84%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Additional styles for the contact form */
+textarea {
+    height: 100px; /* Set a height for the textarea */
+}

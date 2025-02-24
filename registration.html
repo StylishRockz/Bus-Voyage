@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bus Voyage - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateRegistration() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+
+            // Username must be at least 6 characters
+            if (username.length < 6) {
+                alert("Username must be at least 6 characters long.");
+                return false;
+            }
+
+            // Password must be at least 8 characters
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return false;
+            }
+
+            // Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordPattern.test(password)) {
+                alert("Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.");
+                return false;
+            }
+
+            // Password and confirm password must match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Email must be in the format "yourname@domain.com"
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Mobile number must be 10 digits and start with 6-9
+            const mobilePattern = /^[6-9]\d{9}$/;
+            if (!mobilePattern.test(mobile)) {
+                alert("Mobile number must be 10 digits and start with a number between 6 and 9.");
+                return false;
+            }
+
+            // If validation passes, show success alert
+            alert("Registration successful!");
+            return true; // Validation passed
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>Registration</h2>
+            <form action="#" method="post" onsubmit="return validateRegistration();">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required><br>
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required><br>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
